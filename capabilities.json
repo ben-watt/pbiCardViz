@@ -1,0 +1,126 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Measure Data",
+            "description": "A count or sum of stuff",
+            "name": "measure",
+            "kind": "Measure"
+        }
+    ],
+    "objects": {
+        "dataPoint": {
+            "displayName": "Data points",
+            "properties": {
+                "fill": {
+                    "displayName": "Fill",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                 "fontSize": {
+                    "displayName": "Text Size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "heightOffset": {
+                    "displayName": "Height Offset",
+                    "placeHolderText": "0",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "widthOffset": {
+                    "displayName": "Width Offset",
+                    "placeHolderText": "0",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "units": {
+                    "displayName": "Units",
+                    "description": "Number Display Units",
+                    "type": {
+                        "formatting": {
+                            "labelDisplayUnits": true
+                        }
+                    }
+                },
+                "decimalPlaces": {
+                    "displayName": "Decimal Places",
+                    "description": "Number(s) shown after the decimal point",
+                    "type": {
+                        "numeric": true
+                    }
+                }
+
+            }
+        },
+        "subTitle":{
+            "displayName": "Sub Title",
+            "properties": {
+                "text":{
+                    "displayName": "Sub Title",
+                    "description": "Sub title text",
+                    "type": {
+                        "text": true
+                    }            
+                },
+                "textSize":{
+                    "displayName": "Font Size",
+                    "type": {
+                        "formatting": {
+                           "fontSize": true 
+                        }
+                    }
+                },
+                "alignment": {
+                    "displayName": "Alignment",
+                    "type": {
+                        "formatting": {
+                            "alignment": true
+                        }
+                    }
+                },
+                "fontColor": {
+                    "displayName": "Color",
+                    "type":{
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }   
+                    }
+                }
+            }
+        },
+        "icon":{
+            "displayName": "Icon",
+            "properties": {
+                "icon": {
+                    "displayName": "Font Awesome Icon Class",
+                    "description": "Font Awesome Icon (Class Name)",
+                    "type": {
+                       "text": true
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "single": {
+                "role": "measure"
+            },
+            "conditions": [
+                { "measure": {"max": 1 }}
+            ]
+        }
+    ]
+}
